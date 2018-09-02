@@ -23,9 +23,4 @@ class AccessRecord(models.Model):
     date = models.DateField()
 
     def __str__(self):
-        return self.top_name
-
-class Webpage(models.Model):
-    topic = models.ForeignKey(Topic)
-    name = models.CharField(max_length=264, unique=True)
-    url = models.URLField(unique=True)
+        return str(self.date)
